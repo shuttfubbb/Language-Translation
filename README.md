@@ -3,6 +3,9 @@
 ## Introduce
 Build a language translation model based on [Transformer](https://arxiv.org/pdf/1706.03762) architecture.
 
+## Dataset
+[Huggingface](https://huggingface.co/datasets/Helsinki-NLP/opus_books/viewer/en-it)
+
 ## Environment
 pytorch == 2.3.1
 
