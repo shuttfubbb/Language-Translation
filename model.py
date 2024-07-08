@@ -110,7 +110,8 @@ class ResidualConnection(nn.Module):
         self.norm = LayerNormalization(features)
 
     def forward(self, x, sublayer):
-        return self.norm(x + self.dropout(sublayer(self.norm(x)))) 
+        # return self.norm(x + self.dropout(sublayer(x))) # 1
+        return x + self.dropout(sublayer(self.norm(x))) # 2
 
 
 class EncoderBlock(nn.Module):
